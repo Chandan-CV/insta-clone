@@ -1,3 +1,9 @@
+# to test this website
+use this link to check it out: https://insta-clone-f627e.web.app/ 
+I will not exploit your data XD, so go ahead, Sign up and post and image
+Please keep it clean. Post anything, but it shouldn't be vulgar.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
