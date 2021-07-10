@@ -4,6 +4,14 @@ import { db } from './firebase';
 import Context from './MainContext';
 import './Post.css'
 function Post({userName , imageUrl, caption, id}) {
+    const {user} = useContext(Context);
+    const [commment, setComment]= useState([]);
+    db.collection("Posts").doc(id).collection("Comments").onSnapshot((snapshot)=>{
+        snapshot.docs.map((lol)=>{
+           com : lol.data();
+        })
+    })
+   
 
     return (
         <div className= "post">
@@ -28,7 +36,15 @@ function Post({userName , imageUrl, caption, id}) {
 
     <h4 className = "postText"> <strong> {userName}</strong> {caption}</h4>
 
-        </div>
+
+    {/* this is the comments section */}
+    <div className="comments">
+    <input placeholder="enter your comment" />   
+    <Button>send</Button>  
+     <h5>{JSON.stringify(commment)}</h5>
+    </div>
+    
+    </div>
     )
 }
 
